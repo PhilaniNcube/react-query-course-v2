@@ -14,8 +14,11 @@ const IssueItem = ({ item }) => {
               <span className="ml-3  px-2 rounded-full border border-red-600 text-red-700 text-xs">
                 {item.labels[0]}
               </span>
-            </h3>{' '}
+            </h3>
           </div>
+          <span className="text-gray-50 text-xs items-center flex space-x-2">
+            <p>#{item.number}</p> <small>{item.createdDate}</small>
+          </span>
         </div>
         <div className="flex items-center space-x-3">
           <BiMessageDetail className="h-4 w-4 text-gray-500" />
