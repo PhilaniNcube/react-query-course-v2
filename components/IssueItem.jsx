@@ -4,13 +4,13 @@ import { BiMessageDetail } from 'react-icons/bi';
 
 const IssueItem = ({ item }) => {
   return (
-    <div className="w-full border border-gray-100 rounded-md px-8 py-2 my-3">
+    <div className="w-full border border-gray-100 rounded-md px-8 py-8 my-16">
       <div className="flex space-x-12 items-center">
         <CgDanger className="h-8 w-8 text-green-600" />
         <div className="flex-1">
-          <div className="flex">
-            <h3 className="font-medium py-5 text-yellow-500 text-xl">
-              {item.title}{' '}
+          <div className="flex items-center">
+            <h3 className="font-medium  text-yellow-500 text-xl">
+              {item.title}
               <span className="ml-3  px-2 rounded-full border border-red-600 text-red-700 text-xs">
                 {item.labels[0]}
               </span>

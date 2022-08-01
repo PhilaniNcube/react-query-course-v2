@@ -27,6 +27,7 @@ const IssuesList = ({ issues }) => {
           ))}
         </ul>
       </div>
+      <div className="col-span-2 bg-gray-50/20 rounded-lg"></div>
     </div>
   );
 };
