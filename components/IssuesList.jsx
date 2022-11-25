@@ -4,6 +4,13 @@ import { useQuery } from 'react-query';
 import IssueItem from './IssueItem';
 
 const IssuesList = ({ issues }) => {
+
+  const issuesQuery = useQuery(["issues"], async () => {
+    const res = await fetch("https://ui.dev/api/courses/react-query/issues");
+    const issues = res.json();
+    return issues;
+  });
+
   return (
     <div className="grid grid-cols-6 gap-6">
       <div className="col-span-4">
@@ -27,7 +34,9 @@ const IssuesList = ({ issues }) => {
           ))}
         </ul>
       </div>
-      <div className="col-span-2 bg-gray-50/20 rounded-lg"></div>
+      <div className="col-span-2 p-10 bg-gray-50/20 rounded-lg">
+        <p className="text-white text-3xl font-medium text-center">Labels</p>
+      </div>
     </div>
   );
 };
